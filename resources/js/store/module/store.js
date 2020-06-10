@@ -1,8 +1,6 @@
 import { getLoggedinUser } from '../../partials/auth';
 const user = getLoggedinUser();
 
-
-
 export const state = {
     
     currentUser: user,
@@ -12,9 +10,6 @@ export const state = {
     reg_error: null,
     registeredUser: null,
 };
-
-
-
 
 export const getters = {
     isLoading(state) {

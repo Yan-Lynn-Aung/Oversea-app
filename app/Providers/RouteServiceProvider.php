@@ -15,8 +15,8 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
-    protected $recruiterApi = 'App\Http\Controllers\recruiterApi';
-    protected $jobseekerApi = 'App\Http\Controllers\jobseekerApi';
+    protected $recruiterApi = 'App\Http\Controllers\RecruiterApi';
+    protected $jobseekerApi = 'App\Http\Controllers\JobseekerApi';
 
     /**
      * The path to the "home" route for your application.
@@ -83,7 +83,7 @@ class RouteServiceProvider extends ServiceProvider
         Route::prefix('api')
              ->middleware(['api'])
              ->namespace($this->recruiterApi)
-             ->group(base_path('routes/recruiterApi.php'));
+             ->group(base_path('routes/RecruiterApi.php'));
       
     }
     protected function jobseekerRoute()
@@ -91,7 +91,7 @@ class RouteServiceProvider extends ServiceProvider
         Route::prefix('api')
              ->middleware(['api'])
              ->namespace($this->jobseekerApi)
-             ->group(base_path('routes/jobseekerApi.php'));
+             ->group(base_path('routes/JobseekerApi.php'));
       
     }
 }

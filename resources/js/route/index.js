@@ -1,6 +1,6 @@
-import PublicPage from '../components/public/public-layout';
-import recruiterPage from '../components/recruiter/recruiter-layout';
-import jobseekerPage from '../components/jobseeker/jobseeker-layout';
+import PublicPage from '../components/public/PublicLayout';
+import RecruiterPage from '../components/recruiter/RecruiterLayout';
+import JobseekerPage from '../components/jobseeker/JobseekerLayout';
 import Public from './public';
 import recruiter from './recruiter';
 import jobseeker from './jobseeker';
@@ -31,13 +31,13 @@ const route = [
     },
     {
         path: '/recruiter',
-        component: recruiterPage,
+        component: RecruiterPage,
         children: recruiter,
         
     },
     {
         path: '/jobseeker',
-        component: jobseekerPage,
+        component: JobseekerPage,
         children: jobseeker,
        
     },

@@ -5,7 +5,7 @@ import Vuex from 'vuex';
 import * as VeeValidate from 'vee-validate';
 import  routes  from  './route';
 import store from '../js/store/index';
-import Index from './components/index'; 
+import App from './components/App'; 
 import axios from 'axios'
 import VueAxios from 'vue-axios';
 import VueI18n from 'vue-i18n';
@@ -16,13 +16,13 @@ Vue.use(VeeValidate);
 Vue.use(VueRouter);
 Vue.use(Vuex);
 
-
+// router============================
 const router = new VueRouter({
     routes,
     mode: 'history'
 }); 
-
-
+// router============================
+//permission=========================
 router.beforeEach((to, from, next) => {
     if(to.meta.reqiuresAuth){
       const authUser = store.getters.currentUser
@@ -46,7 +46,6 @@ router.beforeEach((to, from, next) => {
         if(authUser.role === 3){
           next()
         }else{
-          alert('2')
           next({name:'Unauthorized'})
         }
       }
@@ -57,9 +56,9 @@ router.beforeEach((to, from, next) => {
       next()
     }
   })
-// important script for component permission
+//permission=========================
 
-
+// languages=========================
 const languages = {
   en: en,
   ja: ja,
@@ -69,11 +68,12 @@ const i18n = new VueI18n({
   locale: 'ja',
   messages: languages,
 })
-
-Vue.component('Index',Index)
-
+// languages=========================
 
 
+// main app==========================
+Vue.component('App',App)
+// main app==========================
 const app = new Vue({
     el: '#app',
     router,

@@ -1,5 +1,5 @@
 import home from '../components/recruiter/Home/Home';
-import post from '../components/recruiter/post/post-list';
+import post from '../components/recruiter/post/PostList';
 const route = [
     {
         path: '/',
