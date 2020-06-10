@@ -43678,7 +43678,7 @@ function getLoggedinUser() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_public_PublicLayout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/public/PublicLayout */ "./resources/js/components/public/PublicLayout.vue");
+/* harmony import */ var _components_public_PublicLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/public/PublicLayout */ "./resources/js/components/public/PublicLayout.vue");
 /* harmony import */ var _components_recruiter_RecruiterLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/recruiter/RecruiterLayout */ "./resources/js/components/recruiter/RecruiterLayout.vue");
 /* harmony import */ var _components_jobseeker_JobseekerLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/jobseeker/JobseekerLayout */ "./resources/js/components/jobseeker/JobseekerLayout.vue");
 /* harmony import */ var _public__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./public */ "./resources/js/route/public.js");
@@ -43698,7 +43698,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var route = [{
   path: '/',
-  component: _components_public_PublicLayout__WEBPACK_IMPORTED_MODULE_9__["default"],
+  component: _components_public_PublicLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
   children: _public__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
   path: '/register',

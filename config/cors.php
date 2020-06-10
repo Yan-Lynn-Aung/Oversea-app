@@ -34,3 +34,5 @@ return [
     'exposedHeaders' => ['Authorization'],
 
 ];
+
+$app->configure('cors');
