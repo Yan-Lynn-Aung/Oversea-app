@@ -35,4 +35,3 @@ return [
 
 ];
 
-$app->configure('cors');
