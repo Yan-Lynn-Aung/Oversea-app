@@ -8,16 +8,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<router-link to="/" class="nav-link">Home <span class="sr-only">(current)</span></router-link>
                 </li>
                 <li class="nav-item">
-                     <router-link to="/post" class="nav-link">post</router-link>
+                     <router-link to="/post" class="nav-link">Post</router-link>
                 </li>
                 <li class="nav-item" v-if="isLoggedin == null">
-                     <router-link to="/login" class="nav-link">Loginn</router-link>
+                     <router-link to="/login" class="nav-link">Login</router-link>
                 </li>
                 <li class="nav-item" v-if="isLoggedin == null">
                    <router-link to="/register" class="nav-link">Register</router-link>
+                </li>
+				<li class="nav-item" v-if="isLoggedin == null">
+                   <router-link :to="{name: 'One', params: { id: 100 }}" class="nav-link">Component One (100)</router-link>
+                </li>
+				<li class="nav-item" v-if="isLoggedin == null">
+                   <router-link :to="{name: 'One', params: { id: 200 }}" class="nav-link">Component One (200)</router-link>
+                </li>
+				<li class="nav-item" v-if="isLoggedin == null">
+                   <a href="#" @click="navToComponentOne(300)" class="nav-link">Component One (300)</a>
                 </li>
                 <li class="nav-item dropdown" v-if="isLoggedin != null">
                     <a
@@ -52,7 +61,10 @@ export default {
         logout(){
             this.$store.commit('logout');
             this.$router.push('/login');
-        }
+		},
+		navToComponentOne(id) {
+			this.$router.push({ name: 'One', params: { id: 300 }});
+		}
     },
     mounted() {
         this.isLoggedin = this.$store.getters.currentUser

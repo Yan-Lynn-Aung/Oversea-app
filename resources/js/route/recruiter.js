@@ -5,7 +5,7 @@ const route = [
         path: '/',
         component: home,
         meta: {
-            reqiuresAuth: true,
+            reqiuresAuth: false,
             recruiter:true, // for only admin component
             jobseeker:false
           }

@@ -1,0 +1,6 @@
+{
+	"locale": "ja",
+	"date-format": "Y/m/d",
+	"AWS_KEY": "001-200-300",
+	"API_URL": "http://localhost:8000/api"
+}
