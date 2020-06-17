@@ -8,9 +8,9 @@ Route::group([
 	'prefix' => 'jobseekers'
 ], function() {
    
-	Route::get('/', 'JobseekerController@index');
-	Route::post('/', 'JobseekerController@create');
-	Route::get('/error', 'JobseekerController@testError');
-	Route::get('/{id}', 'JobseekerController@find');
-	Route::delete('/{id}', 'JobseekerController@delete');
+	Route::get('', 'JobseekerController@index');
+	Route::post('', 'JobseekerController@create');
+	Route::get('error', 'JobseekerController@testError');
+	Route::get('{id}', 'JobseekerController@find');
+	Route::delete('{id}', 'JobseekerController@delete');
 });
